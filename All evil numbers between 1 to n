@@ -1,0 +1,30 @@
+ import java.util.Scanner;
+ class Main
+ {
+ public static void main(String agrs[])
+ {
+ int num,i;
+ int count = 0;
+ Scanner sc= new Scanner(System.in);
+ System.out.println("Enter a number (upper limit): ");
+ int limit = sc.nextInt();
+ System.out.println("Evil Numbers between 1 to "+limit);
+ for ( i =1;i <= limit;i++)
+ {
+ num = i;
+ count = 0;
+ while (num != 0)
+ {
+ if (num%2 == 1)
+ {
+ count++;
+ }
+ num /= 2;
+ }
+ if(count%2==0)
+ {
+ System.out.println(i+" ");
+ }
+ }
+ }
+ }
