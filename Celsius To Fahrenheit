@@ -1,0 +1,14 @@
+ import java.util.Scanner;
+ class Main
+ {
+ public static void main(String args[])
+ {
+ float c;
+ float f;
+ Scanner sc=new Scanner(System.in);
+ System.out.print(" Enter temp in centigrade: ");
+ c = sc.nextFloat();
+ f = (float) ((1.8* c) + 32.0);
+ System.out.print(" Temperature in Fahrenheit = "+f);
+ }
+ }
