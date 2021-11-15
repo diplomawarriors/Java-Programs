@@ -1,0 +1,39 @@
+import java.util.Scanner;
+ public class Main {
+ 
+ public static void main(String args[])
+ {
+ int n;
+ int cn,num;
+ int sq;
+ int r;
+ int t;
+ boolean equal;
+ Scanner sc = new Scanner(System.in);
+ System.out.print("Enter a number : ");
+ n=sc.nextInt();
+ System.out.println("List of Automorphic number between 1 to "+n+":");
+ System.out.println("Number : Square");
+ for(int i=1;i<=n;i++)
+ {
+ cn=i;
+ num=i;
+ sq=cn*cn;
+ t=10;
+ equal=false;
+ while(cn>0)
+ {
+ r=sq%t;
+ if(num==r)
+ {
+ equal=true;
+ break;
+ }
+ cn=cn/10;
+ t=t*10;
+ }
+ if(equal==true)
+ System.out.printf("%5d : %d\n",num,sq);
+ }
+ }
+ }
