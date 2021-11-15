@@ -1,0 +1,32 @@
+import java.util.Scanner;
+ public class Main {
+ public static void main(String args[])
+ {
+ int up;
+ int lw;
+ int n;
+ int sum=0,prod=1;
+ int d;
+ Scanner sc = new Scanner(System.in);
+ System.out.print("Enter a Starting Number(lower limit) : ");
+ lw=sc.nextInt();
+ System.out.println("Enter the Ending Number (upper limit):");
+ up=sc.nextInt();
+ System.out.println("\nList of Spy number between "+lw+"-"+up+":");
+ for(int i=lw;i<=up;i++)
+ {
+ sum=0;
+ prod=1;
+ n=i;
+ while(n>0)
+ {
+ d=n%10;
+ sum=sum+d;
+ prod=prod*d;
+ n=n/10;
+ }
+ if(sum==prod)
+ System.out.println(""+i);
+ }
+ }
+ }
